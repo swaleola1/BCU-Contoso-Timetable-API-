@@ -1,0 +1,1941 @@
+{
+	"info": {
+		"_postman_id": "5a926f02-9483-4311-a567-2ad85bea6725",
+		"name": "BCU Contoso Timetable API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44142086"
+	},
+	"item": [
+		{
+			"name": "Positive test",
+			"item": [
+				{
+					"name": "Fetch Courses from Page 1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51106/course/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51106",
+							"path": [
+								"course",
+								"page",
+								"1"
+							]
+						},
+						"description": "Request Description:\n\nGET request to fetch courses from page 1 of the course list.\n\nExpected Result:\n\nThe API should return a valid JSON response containing:\n\nA total of 50 items (as shown by the totalItems key).\n\nA list of courses for page 1 in the items array. Each course should have details like id, name, description, code, and startDate.\n\nIf no data is available for page 1, the items array will be empty.\n\nThe response should include a 200 OK status indicating that the request was successful."
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Courses from Page 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51106/course/page/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51106",
+							"path": [
+								"course",
+								"page",
+								"2"
+							]
+						},
+						"description": "Description for `http://localhost:51106/course/page/2`:\r\n\r\nThis endpoint fetches the courses from page 2 of the course list. It returns a JSON response that contains:\r\n\r\n- `totalItems`: The total number of items available, which in this case is 50.\r\n- `items`: A list of course objects for the second page. Each course includes details such as:\r\n  - `id`: A unique identifier for the course.\r\n  - `name`: The name of the course.\r\n  - `description`: A brief description of the course content.\r\n  - `code`: The unique course code.\r\n  - `startDate`: The starting date for the course. \r\n\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Details by ID 1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:57399/course/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "57399",
+							"path": [
+								"course",
+								"1"
+							]
+						},
+						"description": "Fetches the details of a specific course using its `courseId`.\n\n- Method: GET\n    \n- Endpoint: `http://localhost:50466/course/{courseId}`\n    \n- Parameters: `courseId` (required) - The ID of the course to retrieve.\n    \n- Response: Returns a JSON object with course details such as `name`, `description`, `startDate`, `endDate`, and `enrolledStudents`.\n    \n- Example Request: `http://localhost:50466/course/1`"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Details by ID 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:57399/course/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "57399",
+							"path": [
+								"course",
+								"1"
+							]
+						},
+						"description": "Fetches the details of a specific course using its `courseId`.\n\n- Method: GET\n    \n- Endpoint: `http://localhost:57399/course/{courseId}`\n    \n- Parameters: `courseId` (required) - The ID of the course to retrieve.\n    \n- Response: Returns a JSON object with course details such as `name`, `description`, `startDate`, `endDate`, and `enrolledStudents`.\n    \n- Example Request: `http://localhost:57399/course/2`"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:57399/course/1/name?newName=jack",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "57399",
+							"path": [
+								"course",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "jack"
+								}
+							]
+						},
+						"description": "StartFragment\n\nUpdates the details of a specific course using its `courseI`EndFragment  \n\n- Method: PUT\n    \n- Endpoint: `http://localhost:57399/course/{courseId}`\n    \n- Parameters: `courseId` (required) - The ID of the course to retrieve.\n    \n- Response: Returns a JSON object with course details such as `name`, `description`, `startDate`, `endDate`, and `enrolledStudents`.\n    \n- Example Request: `http://localhost:57399/course/2`"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:57399/course/2/name?newName=deborah",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "57399",
+							"path": [
+								"course",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "deborah"
+								}
+							]
+						},
+						"description": "Updates the details of a specific course using its `courseId`.\n\n- Method: PUT\n    \n- Endpoint: `http://localhost:57399/course/{courseId}`\n    \n- Parameters: `courseId` (required) - The ID of the course to retrieve.\n    \n- Response: Returns a JSON object with course details such as `name`, `description`, `startDate`, `endDate`, and `enrolledStudents`.\n    \n- Example Request: `http://localhost:57399/course/2`"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events from Page 1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:57399/event/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "57399",
+							"path": [
+								"event",
+								"page",
+								"1"
+							]
+						},
+						"description": "### Method: PUT\n\n**Endpoint:** `http://localhost:57399/event/page/{pageNumber}`  \n**Parameters:**\n\n- `pageNumber` (required) - The page number to retrieve events from.\n    \n\n**Response:**\n\nReturns a JSON object with event details such as the name, description, start date, and associated metadata for the requested page of events.\n\n### Example Request:\n\n`http://localhost:57399/event/page/1`\n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51947/event/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51947",
+							"path": [
+								"event",
+								"1"
+							]
+						},
+						"description": "### Method: GET\n\nStartFragment\n\n**Fetches the details of a specific event using its eventId.**\n\nThis description concisely communicates the purpose of the request for retrieving event details based on the event ID.\n\nEndFragment\n\nStartFragment\n\n**Endpoint**: `http://localhost:57399/event/page/{pageNumber}`\n\n**Parameters**:\n\n- `pageNumber` (required) – The page number from which events should be retrieved.\n    \n\n**Response**:\n\n- Returns a JSON object containing the event details for the specified page, such as:\n    \n    - `name` (event name)\n        \n    - `description` (event description)\n        \n    - `startDate` (event start date)\n        \n    - Associated metadata (e.g., `code`, `enrolledStudents`).\n        \n\n**Example Request**:\n\n- `http://localhost:57399/event/page/1`\n    \n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51947/event/2/name?newName=john",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51947",
+							"path": [
+								"event",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "john"
+								}
+							]
+						},
+						"description": "### Method: PUT\n\nStartFragment\n\n**Short Description**:  \nThis request updates the name of an event using its event ID and the new event name provided as a query parameter.\n\n---\n\n**Long Description**:  \n**Endpoint**: `http://localhost:57399/event/{eventId}/name`\n\n**Parameters**:\n\n- `eventId` (required): The unique ID of the event to update.\n    \n- `newName` (required): The new name to update the event with.\n    \n\n**Response**:\n\n- Returns a JSON object with updated event details, including:\n    \n    - `id`: The event ID\n        \n    - `name`: The updated event name\n        \n    - `description`: The event's description\n        \n    - `startDate`: The event's start date\n        \n    - `endDate`: The event's end date\n        \n    - `location`: The event's location\n        \n\n**Example Request**:\n\n- `http://localhost:57399/event/2/name?newName=john`\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Students from Page 1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51947/student/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51947",
+							"path": [
+								"student",
+								"page",
+								"1"
+							]
+						},
+						"description": "### Method: GET\n\nStartFragment\n\n**Short Description**:  \nThis request retrieves a list of students from a specified page number, along with their details, such as name, email, address, and phone number.\n\n---\n\n**Long Description**:  \n**Endpoint**: `http://localhost:57399/student/page/{pageNumber}`\n\n**Parameters**:\n\n- `pageNumber` (required): The page number to retrieve the student list from.\n    \n\n**Response**:\n\n- Returns a JSON object containing:\n    \n    - `totalItems`: The total number of students available.\n        \n    - `items`: A list of students for the requested page, including details like:\n        \n        - `id`: The student's ID\n            \n        - `name`: The student's name\n            \n        - `email`: The student's email address\n            \n        - `address`: The student's address\n            \n        - `phoneNumber`: The student's phone number\n            \n        - `specialNeeds`: Information about any special needs the student may have\n            \n\n**Example Request**:\n\n- `http://localhost:57399/student/page/1`\n    \n\n---\n\n  \n  \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Student Details by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51947/student/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51947",
+							"path": [
+								"student",
+								"1"
+							]
+						},
+						"description": "### Method: GET\n\nStartFragment\n\n**Short Description**:  \nThis request retrieves detailed information of a specific student based on their student ID, including their enrolled courses, contact information, and enrollment date.\n\n---\n\n**Long Description**:\n\n**Endpoint**: `http://localhost:57399/student/{studentId}`\n\n**Parameters**:\n\n- `studentId` (required): The ID of the student to retrieve details for.\n    \n\n**Response**:\n\n- Returns a JSON object containing:\n    \n    - `id`: The student's ID\n        \n    - `name`: The student's full name\n        \n    - `email`: The student's email address\n        \n    - `address`: The student's home address\n        \n    - `phoneNumber`: The student's contact number\n        \n    - `enrollmentDate`: The date the student was enrolled\n        \n    - `enrolledCourses`: An array of courses the student is currently enrolled in, with course details like course ID, name, and description\n        \n\n**Example Request**:\n\n- `http://localhost:57399/student/1`\n    \n\nEndFragment  \n  \n\n---\n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51947/student/1/name?newName=Tom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51947",
+							"path": [
+								"student",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Tom"
+								}
+							]
+						},
+						"description": "### Method: PUT\n\n**Short Description**:  \nThis request updates the name of a specific student using their student ID. It allows the client to modify the name of the student.\n\n---\n\n**Long Description**:\n\n**Endpoint**: `http://localhost:57399/student/{studentId}/name`\n\n**Parameters**:\n\n- `studentId` (required): The ID of the student whose name is to be updated.\n    \n- `newName` (required): The new name to assign to the student.\n    \n\n**Response**:\n\n- Returns a JSON object containing the updated student details, including the updated `name`, along with the student's `id`, `email`, `address`, `phoneNumber`, `enrollmentDate`, and `enrolledCourses`.\n    \n\n**Example Request**:\n\n- `http://localhost:57399/student/1/name?newName=Tom`\n    \n\n---\n\n---"
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all the positive test cases for the BCU Contoso Timetable API. It includes tests that validate the correct behavior of various endpoints when valid inputs are provided."
+		},
+		{
+			"name": "Error handling test",
+			"item": [
+				{
+					"name": "Test invalid input",
+					"item": [
+						{
+							"name": "Invalid Page Number for course",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7437/course/page/i",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7437",
+									"path": [
+										"course",
+										"page",
+										"i"
+									]
+								},
+								"description": "### Description:\n\nThis request tests the API's ability to handle invalid page number inputs and returns a proper error response.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:57399/event/page/{pageNumber}`\n    \n- **Parameters**:\n    \n    - `pageNumber` (required): The page number to retrieve events from. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a `400 Bad Request` error when an invalid page number, such as a non-numeric value, is provided. The expected response is an error message indicating that the `pageNumber` is invalid.\n    \n- **Example Invalid Request**: `http://localhost:57399/event/page/i`\n    \n- **Expected Response**:\n    \n    - HTTP Status: 400\n        \n    - Error Message: `\"The value 'i' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid course ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/course/i",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"course",
+										"i"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle invalid `courseId` inputs and ensures it returns the appropriate error response.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/course/{courseId}`\n    \n- **Parameters**:\n    \n    - `courseId` (required): The unique identifier for the course. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid `courseId`, such as a non-numeric value like the letter `i`, is provided. The expected response is an error message indicating that the `courseId` is invalid.\n    \n- **Example Invalid Request**: `http://localhost:50466/course/i`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'i' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Course ID Format",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/course/i/name?newName=jackson",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"course",
+										"i",
+										"name"
+									],
+									"query": [
+										{
+											"key": "newName",
+											"value": "jackson"
+										}
+									]
+								},
+								"description": "**Test Invalid Course ID Format**\n\n### Short Description:\n\nThis request tests the API's ability to handle an invalid `courseId` when updating course details, and ensures that the API responds with the correct error for invalid format inputs.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/course/{courseId}/name`\n    \n- **Parameters**:\n    \n    - `courseId` (required): The unique identifier for the course (must be an integer value).\n        \n    - `newName` (required): The new name for the course.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid `courseId` is provided, such as a non-numeric value (e.g., \"i\" instead of a valid numeric course ID).\n    \n- **Example Invalid Request**: `http://localhost:50466/course/i/name?newName=jackson`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'i' is not valid.\"`\n        \n\n### Additional Notes:\n\nThis type of test helps ensure that the API has proper validation checks for numeric IDs and that appropriate error responses are returned when invalid data is encountered."
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Event Page Number Format",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/event/page/i",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"event",
+										"page",
+										"i"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle invalid `pageNumber` inputs for the event page, specifically when the page number is provided in an invalid format (e.g., a string instead of a numeric value). It ensures that the API responds with the correct error.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/event/page/{pageNumber}`\n    \n- **Parameters**:\n    \n    - `pageNumber` (required): The page number to retrieve events from. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid page number is provided, such as a non-numeric value (e.g., \"i\" instead of a valid numeric page number).\n    \n- **Example Invalid Request**: `http://localhost:50466/event/page/i`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'i' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Event ID Format",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/event/i",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"event",
+										"i"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle an invalid `eventId` format in the URL, where a non-numeric value (e.g., a string) is provided instead of a valid numeric ID. The test ensures that the API responds with the correct error message.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/event/{eventId}`\n    \n- **Parameters**:\n    \n    - `eventId` (required): The ID of the event to retrieve. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid `eventId` format (non-numeric value) is provided.\n    \n- **Example Invalid Request**: `http://localhost:50466/event/i`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'i' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Event ID in PUT Request",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/event/i/name?newName=Jessica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"event",
+										"i",
+										"name"
+									],
+									"query": [
+										{
+											"key": "newName",
+											"value": "Jessica"
+										}
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle an invalid `eventId` in a `PUT` request. Specifically, it checks how the API responds when a non-numeric `eventId` is provided in the URL.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/event/{eventId}/name`\n    \n- **Parameters**:\n    \n    - `eventId` (required): The ID of the event to update. It must be a numeric value.\n        \n    - `newName` (required): The new name for the event.\n        \n- **Test Purpose**: This test ensures that the API responds with a **400 Bad Request** error when a non-numeric `eventId` (e.g., a string like \"i\") is provided in a `PUT` request to update an event's name.\n    \n- **Example Invalid Request**: `http://localhost:50466/event/i/name?newName=Jessica`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'i' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Page Number for Student Endpoint",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/student/page/j",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"student",
+										"page",
+										"j"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API’s ability to handle invalid page numbers in a `GET` request for student data. Specifically, it checks the response when a non-numeric value (e.g., 'j') is provided for the `pageNumber` parameter.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/student/page/{pageNumber}`\n    \n- **Parameters**:\n    \n    - `pageNumber` (required): The page number to retrieve student data. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid `pageNumber` (such as a non-numeric value like 'j') is passed.\n    \n- **Example Invalid Request**: `http://localhost:50466/student/page/j`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'j' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid Student ID for Student Endpoint",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/student/j",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"student",
+										"j"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API’s ability to handle invalid student ID inputs by sending a non-numeric value (`'j'`) for the `studentId` parameter. It verifies if the API responds with an appropriate error message.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/student/{studentId}`\n    \n- **Parameters**:\n    \n    - `studentId` (required): The ID of the student to retrieve. It must be a numeric value.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **400 Bad Request** error when an invalid `studentId` (non-numeric value like `'j'`) is passed.\n    \n- **Example Invalid Request**: `http://localhost:50466/student/j`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'j' is not valid.\"`"
+							},
+							"response": []
+						},
+						{
+							"name": "Test Invalid Student ID for PUT Update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/student/k/name?newName=Vanessa",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"student",
+										"k",
+										"name"
+									],
+									"query": [
+										{
+											"key": "newName",
+											"value": "Vanessa"
+										}
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle invalid student IDs by sending a non-numeric value (`'k'`) in the `studentId` parameter when attempting to update a student's name.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/student/{studentId}/name`\n    \n- **Parameters**:\n    \n    - `studentId` (required): The ID of the student whose name is to be updated. It must be a numeric value.\n        \n    - `newName` (required): The new name to assign to the student.\n        \n- **Test Purpose**: This test ensures that the API responds with a **400 Bad Request** error when a non-numeric value (`'k'`) is passed for the `studentId`. This verifies that the API enforces correct data types for parameters.\n    \n- **Example Invalid Request**: `http://localhost:50466/student/k/name?newName=Vanessa`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `400 Bad Request`\n        \n    - **Error Message**: `\"The value 'k' is not valid.\"`"
+							},
+							"response": []
+						}
+					],
+					"description": "This folder includes test cases designed to validate how the BCU Contoso Timetable API handles invalid input. These tests cover scenarios such as missing or incorrect parameters, invalid data formats, or unsupported characters in the request. The aim is to ensure that the API properly handles and returns relevant error messages (e.g., HTTP 400 Bad Request) when faced with invalid input from users."
+				},
+				{
+					"name": "Test Non-Existing Resource",
+					"item": [
+						{
+							"name": "Course Page number",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7437/course/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7437",
+									"path": [
+										"course",
+										""
+									]
+								},
+								"description": "For the request you have shown, here are the suggestions:\n\n### Description:\n\nThis request tests the API's response when trying to access a non-existent course. A `404 Not Found` status should be returned, indicating that the requested resource is unavailable.\n\n### Another description for the event endpoint based on the provided details:\n\n**Method:** GET  \n**Endpoint:** `http://localhost:57399/event/page/{pageNumber}`  \n**Parameters:**\n\n- `pageNumber` (required) - The page number to retrieve events from.\n    \n\n**Response:**  \n  \nReturns a JSON object with event details, such as the name, description, start date, and associated metadata for the requested page of events.\n\n**Example Request:**  \n`http://localhost:57399/event/page/1`\n\n---\n\n404 error occurs when the resource (e.g., the course or event with the given ID) is not found. This is expected behavior for non-existent data."
+							},
+							"response": []
+						},
+						{
+							"name": "Course ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:51106/course/page/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "51106",
+									"path": [
+										"course",
+										"page",
+										"2"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's behavior when attempting to access a non-existing course using a valid but non-existent `courseId`.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/{courseId}`\n    \n- **Parameters**:\n    \n    - `courseId` (required): The unique identifier for the course.\n        \n- **Test Purpose**: This test ensures that the API correctly responds with a **404 Not Found** error when a non-existing `courseId` is provided. The response should include a message indicating that the requested resource could not be found.\n    \n- **Example Invalid Request**: `http://localhost:50466/1`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `404 Not Found`\n        \n    - **Error Message**: `\"The requested course could not be found.\"` or any other related error message that your system may return."
+							},
+							"response": []
+						},
+						{
+							"name": "Course ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/course/1/newName=jackson",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"course",
+										"1",
+										"newName=jackson"
+									]
+								},
+								"description": "### **Test Invalid Course ID for PUT Update**\n\n### Short Description:\n\nThis request tests the API's ability to handle an invalid `courseId` when attempting to update the course name. It ensures the API properly handles non-existent or incorrect course IDs.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/course/{courseId}/name`\n    \n- **Parameters**:\n    \n    - `courseId` (required): The ID of the course whose name is to be updated. The `courseId` must exist in the database and be a valid course ID.\n        \n    - `newName` (required): The new name to assign to the course.\n        \n- **Test Purpose**: This test ensures that when an invalid `courseId` (e.g., a non-existing course or incorrect ID format) is used in the request, the API responds with a **404 Not Found** error. This verifies the proper handling of invalid resource identifiers.\n    \n- **Example Invalid Request**: `http://localhost:50466/course/1/name?newName=jackson`\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `404 Not Found`\n        \n    - **Error Message**: `\"Course not found.\"` or a similar message indicating the course does not exist.\n        \n\n### Additional Notes:\n\nThis test is crucial for maintaining data integrity and ensuring that only valid course identifiers can be used in operations such as updates. It prevents the possibility of making changes to non-existent courses."
+							},
+							"response": []
+						},
+						{
+							"name": "Event ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/page/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"page",
+										"1"
+									]
+								},
+								"description": "**Test Non-Existing Event ID (GET)**\n\n### Short Description:\n\nThis request tests the API's ability to handle an attempt to fetch an event by using a non-existent event ID, ensuring the API returns a `404 Not Found` status code with the appropriate error message.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/event/{eventId}`\n    \n- **Parameters**:\n    \n    - `eventId` (required): The ID of the event to retrieve. This ID must match an existing event in the system.\n        \n- **Test Purpose**: This test ensures that when a non-existent `eventId` is used in the request, the API returns a **404 Not Found** error. This verifies that the API handles requests for non-existent resources appropriately.\n    \n- **Example Invalid Request**: `http://localhost:50466/event/999999` (where `999999` is an ID that does not exist in the system)\n    \n- **Expected Response**:\n    \n    - **HTTP Status**: `404 Not Found`\n        \n    - **Error Message**: `\"Event not found.\"` or a similar message indicating that the requested event does not exist in the database.\n        \n\n### Additional Notes:\n\nThis test is crucial for validating that the API responds correctly when attempting to retrieve data that does not exist, preventing unnecessary data leakage or incorrect responses. It ensures that the system handles \"not found\" errors properly and consistently across different endpoints."
+							},
+							"response": []
+						},
+						{
+							"name": "Event ID (PUT)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/event/1/newName=Jessica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"event",
+										"1",
+										"newName=Jessica"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API's ability to handle invalid `eventId` in the PUT request, ensuring that the API returns a `404 Not Found` status code when attempting to update an event that does not exist.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/event/{eventId}/name`\n    \n- **Parameters**:\n    \n    - `eventId` (required): The ID of the event to update. The event ID must be valid and exist in the system.\n        \n    - `newName` (required): The new name to assign to the event.\n        \n- **Test Purpose**: This test ensures that when an invalid `eventId` is used in the request (an event that does not exist in the system), the API correctly responds with a **404 Not Found** error. This validates that the system prevents unauthorized or non-existent event updates.\n    \n- **Example Invalid Request**:\n    \n    - URL: `http://localhost:50466/event/1/name?newName=Jessica`\n        \n    - The ID `1` might not exist in the system, so the API returns a `404 Not Found` error.\n        \n- **Expected Response**:\n    \n    - **HTTP Status**: `404 Not Found`\n        \n    - **Error Message**: `\"Event not found\"` or a similar message indicating the requested event does not exist.\n        \n\n### Additional Notes:\n\nThis test ensures that the system provides appropriate feedback when a request is made to update an event that does not exist, preventing unnecessary changes or errors in the system."
+							},
+							"response": []
+						},
+						{
+							"name": "Student ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/student",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"student"
+									]
+								},
+								"description": "### Short Description:\n\nThis request tests the API’s ability to handle scenarios where a non-existing student resource is requested, triggering a `404 Not Found` error when attempting to access a student with an invalid ID.\n\n### Long Description:\n\n- **Endpoint**: `http://localhost:50466/student`\n    \n- **Parameters**:\n    \n    - The request is missing a valid `studentId`. This can be simulated by using a URL that does not exist or by entering an invalid `studentId`.\n        \n- **Test Purpose**: This test ensures that the API responds correctly when trying to access a student resource that doesn't exist, returning an appropriate `404 Not Found` status.\n    \n- **Example Invalid Request**:\n    \n    - URL: `http://localhost:50466/student/j` (where \"j\" is not a valid student ID).\n        \n- **Expected Response**:\n    \n    - **HTTP Status**: `404 Not Found`\n        \n    - **Error Message**: `\"Student not found\"` or a similar message indicating the resource does not exist."
+							},
+							"response": []
+						},
+						{
+							"name": "Student ID for PUT Request",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:50466/student/6/newName=Vanessa",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "50466",
+									"path": [
+										"student",
+										"6",
+										"newName=Vanessa"
+									]
+								},
+								"description": "**Description**:  \nWhen an invalid `studentId` (e.g., a non-existent ID or incorrect format) is provided, the API should return a `404 Not Found` error with a message indicating that the student was not found. This verifies that the API is correctly validating the ID and handling errors as expected.\n\nExample Invalid Request:  \n`http://localhost:50466/student/6?newName=Vanessa`\n\nExpected Response:\n\n- **HTTP Status**: 404\n    \n- **Error Message**: \"Student with ID '6' not found.\"\n    \n\n---\n\n  \n  \n\n---"
+							},
+							"response": []
+						}
+					],
+					"description": "This folder contains test cases to validate how the BCU Contoso Timetable API handles requests for non-existent resources. These tests focus on scenarios where the requested resource, such as a course or student, does not exist in the system. The goal is to ensure that the API correctly returns a `404 Not Found` status and appropriate error messages when attempting to access non-existent resources."
+				}
+			],
+			"description": "This folder contains all the test cases focused on error handling for the BCU Contoso Timetable API. It includes tests that validate how the API responds to invalid inputs, unexpected conditions, and error scenarios such as missing parameters, invalid data formats, and server issues. The goal is to ensure that the API returns appropriate error messages and status codes when faced with erroneous requests."
+		},
+		{
+			"name": "Integration test",
+			"item": [
+				{
+					"name": "Fetch Courses from Page 16",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53155/course/page/16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53155",
+							"path": [
+								"course",
+								"page",
+								"16"
+							]
+						},
+						"description": "#### **Test Scenario: Fetch Courses from Page 16**\n\n1. **Test Objective**: Ensure that the front-end correctly interacts with the API to fetch courses from page 16 of the course list.\n    \n2. **Request Details**:\n    \n    - **HTTP Method**: GET\n        \n    - **Request URL**: `https://localhost:50466/course/page/16`\n        \n3. **Expected Outcome**:\n    \n    - The response should return a status code of **200 OK**.\n        \n    - The API should return a valid JSON response that contains:\n        \n        - **totalItems** key, showing the total number of courses (should be 50 in this case).\n            \n        - **items** array, containing the list of courses for page 1. Each course should include:\n            \n            - `id`\n                \n            - `name`\n                \n            - `description`\n                \n            - `code`\n                \n            - `startDate`\n                \n    - If no data is available for page 1, the `items` array should be empty.\n        \n4. **Steps for Testing**:\n    \n    - **Step 1**: Simulate a front-end request to fetch courses from page 1 using Postman (`GET /course/page/16`).\n        \n    - **Step 2**: Ensure the response is correctly formatted and contains the expected data (e.g., 50 courses for page 16).\n        \n    - **Step 3**: Check the response code for a successful request (200 OK).\n        \n    - **Step 4**: Verify that the database returns the correct number of courses for page 1, ensuring that database queries and responses align with the front-end request.\n        \n5. **Expected Results**:\n    \n    - The request should return a valid response with a total of 50 items (as shown by the `totalItems` key).\n        \n    - The `items` array should contain the details of each course such as `id`, `name`, `description`, `code`, and `startDate`.\n        \n    - If no courses exist for page 16, the `items` array should be empty.\n        \n    - The response should return a **200 OK** status indicating that the request was successful."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Details by ID 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/course/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"course",
+								"2"
+							]
+						},
+						"description": "#### 1\\. **Test Objective**:\n\nEnsure that the integration between the front-end and back-end works as expected when fetching course details by a given course ID. The test ensures that the front-end makes a correct API call and receives the appropriate course data in response.\n\n#### 2\\. **Request Details**:\n\n- **HTTP Method**: `GET`\n    \n- **Request URL**: `https://localhost:50466/course/2` (Replace `2` with the dynamic course ID)\n    \n- **Query Parameters**:\n    \n    - **courseId**: The ID of the course to fetch (e.g., 2).\n        \n\n#### 3\\. **Expected Response**:\n\n- The response should be a valid JSON object containing course details for the provided course ID.\n    \n- **Response Structure**:\n    \n    - `id`: The unique identifier of the course (e.g., `2`).\n        \n    - `name`: Name of the course (e.g., `deborah`).\n        \n    - `description`: A description of the course.\n        \n    - `code`: The course code.\n        \n    - `startDate`: The start date of the course.\n        \n    - `endDate`: The end date of the course.\n        \n    - `enrolledStudents`: An array of students enrolled in the course, containing details such as student IDs and names.\n        \n\n#### 4\\. **Test Scenarios**:\n\n1. **Positive Test**:\n    \n    - Request a valid course ID (e.g., `2`).\n        \n    - **Expected Result**: The API should return a 200 OK status with the course details.\n        \n    - { \"id\": 2, \"name\": \"deborah\", \"description\": \"Dolore necessitatibus...\", \"code\": \"A686552854353\", \"startDate\": \"2025-06-05T01:41:58.1625364\", \"endDate\": \"2025-07-14T01:41:58.1625364\", \"enrolledStudents\": \\[ { \"id\": 1, \"name\": \"John Doe\" } \\]}\n        \n2. **Negative Test**:\n    \n    - Request a non-existing course ID (e.g., `999`).\n        \n    - **Expected Result**: The API should return a 404 Not Found status with an error message indicating that the course ID does not exist.\n        \n\n#### 5\\. **Test Result**:\n\n- **Success**: If the API returns a valid course details JSON response with status 200 OK.\n    \n- **Failure**: If the API returns a different status code or an invalid response.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/course/1/name?newName=rose",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"course",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "rose"
+								}
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to update the course name by its ID. This tests the integration between the front-end, back-end API, and database.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `PUT`\n        \n    - **Request URL**: `https://localhost:50466/course/1/name`\n        \n    - **Query Parameters**:\n        \n        - `newName`: `rose` (the new name to assign to the course)\n            \n2. **Expected Response**:  \n      \n    The API should return a `200 OK` status and a valid JSON response with the updated course details. The response body should contain:\n    \n    - **id**: `1`\n        \n    - **name**: `rose` (this should be the new course name after update)\n        \n    - **description**: Updated course description\n        \n    - **code**: The course code\n        \n    - **startDate**: Start date of the course\n        \n    - **endDate**: End date of the course\n        \n    - **enrolledStudents**: A list of students enrolled in the course (may be empty)\n        \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status with the updated course details.\n        \n    - If the course ID is invalid or the `newName` is missing, the API should return a `400 Bad Request` status.\n        \n\n---\n\n### Additional Scenarios to Include (if applicable):\n\n#### Positive Test\n\n- **Input**: Valid course ID (e.g., `1`), valid `newName` (e.g., `rose`).\n    \n- **Expected Outcome**: The API returns a `200 OK` status and the updated course name in the response.\n    \n\n#### Negative Test\n\n- **Input**: Invalid course ID (e.g., `9999`), or missing `newName` parameter.\n    \n- **Expected Outcome**: The API returns a `400 Bad Request` status with an appropriate error message.\n    \n\n---\n\n### How to Add This to Postman:\n\n1. **Go to your Postman request** (the `PUT /course/{courseId}/name` request).\n    \n2. **Click on the \"Documentation\" tab** on the top of the request screen.\n    \n3. **Paste the documentation** above into the documentation section for the request.\n    \n4. **Save** the request.\n    \n\nThis will ensure that anyone accessing this request will have clear documentation regarding the integration test for updating a course name by ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/course/2/name?newName=deborah",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"course",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "deborah"
+								}
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to update the course name by its ID, validating the successful update in the backend and the database.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `PUT`\n        \n    - **Request URL**: `https://localhost:50466/course/2/name`\n        \n    - **Query Parameters**:\n        \n        - `newName`: `deborah` (the new name to assign to the course)\n            \n2. **Expected Response**:  \n      \n    The API should return a `200 OK` status and a valid JSON response with the updated course details, including:\n    \n    - **id**: `2`\n        \n    - **name**: `deborah` (the new name of the course after the update)\n        \n    - **description**: The updated description of the course\n        \n    - **code**: The course code\n        \n    - **startDate**: The course start date\n        \n    - **endDate**: The course end date\n        \n    - **enrolledStudents**: A list of students currently enrolled in the course (may be empty)\n        \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status along with the updated course details.\n        \n    - If the course ID is invalid or the `newName` parameter is missing, the API should return a `400 Bad Request` status.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: A valid course ID (e.g., `2`) and a valid `newName` (e.g., `deborah`).\n    \n- **Expected Outcome**: The API returns a `200 OK` status with the updated course name and other details.\n    \n\n#### Negative Test\n\n- **Input**: An invalid course ID (e.g., `9999`) or a missing `newName` parameter.\n    \n- **Expected Outcome**: The API returns a `400 Bad Request` status with an error message indicating that the request was malformed or missing necessary information.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events from Page 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/event/page/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"event",
+								"page",
+								"2"
+							]
+						},
+						"description": "### **Test Scenario: Fetch Events from Page 2**\n\n1. **Test Objective**:  \n      \n    Ensure that the front-end correctly interacts with the API to fetch events from page 2 of the event list, validating the data retrieval and accuracy of event information.\n    \n2. **Request Details**:\n    \n    - **HTTP Method**: `GET`\n        \n    - **Request URL**: `https://localhost:50466/event/page/2`\n        \n    - **Query Parameters**: None (this request fetches events from page 2 directly)\n        \n3. **Expected Response**:  \n      \n    The API should return a `200 OK` status and a valid JSON response with the following structure:\n    \n    - **totalItems**: The total number of events available in the database. In this case, the response indicates `300`.\n        \n    - **items**: An array of events for page 2. Each event in the array should include:\n        \n        - **id**: The event ID\n            \n        - **name**: The name of the event\n            \n        - **description**: The event description\n            \n        - **startDate**: The event's start date\n            \n        - **endDate**: The event's end date\n            \n        - **code**: Event code (may be null if not applicable)\n            \n    - If there are no events for page 2, the API should return an empty `items` array.\n        \n4. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status along with the events for page 2.\n        \n    - If page 2 has no events or if there’s an error in the request, the API should return a relevant error status like `400` or `404` with an appropriate message.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid page number (e.g., `2`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status and a list of events for page 2.\n    \n\n#### Negative Test\n\n- **Input**: Invalid page number (e.g., `10000`)\n    \n- **Expected Outcome**: The API returns a `404 Not Found` status or an empty list for page 10000.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/event/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"event",
+								"2"
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to fetch a specific event by its ID and validates the event details returned by the API.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `GET`\n        \n    - **Request URL**: `https://localhost:50466/event/2`\n        \n    - **Query Parameters**: None (this request fetches the event with ID `2` directly)\n        \n2. { \"id\": 2, \"name\": \"Small Wooden Table\", \"description\": \"Delectus in et veniam ut sint molestias minus magnam.\", \"startDate\": \"2024-08-21T15:04:10.2364937\", \"endDate\": \"2024-08-21T16:03:10.2364937\", \"location\": \"john\", \"course\": \"course_name\"}\n    \n    - **id**: The unique event ID\n        \n    - **name**: The name of the event\n        \n    - **description**: The event description\n        \n    - **startDate**: The start date of the event\n        \n    - **endDate**: The end date of the event\n        \n    - **location**: The event's location\n        \n    - **course**: The associated course for the event\n        \n    \n    Example JSON response:\n    \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status along with the event details for the given ID.\n        \n    - If the event ID does not exist or there's an error, the API should return a relevant error status, such as `404 Not Found`.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid event ID (e.g., `2`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status and the event details.\n    \n\n#### Negative Test\n\n- **Input**: Invalid event ID (e.g., `10000`)\n    \n- **Expected Outcome**: The API returns a `404 Not Found` status.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/event/2/name?newName=john",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"event",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "john"
+								}
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to update an event's name by its ID, and validate that the event details are updated correctly.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `PUT`\n        \n    - **Request URL**: `https://localhost:50466/event/2/name`\n        \n    - **Query Parameters**:\n        \n        - `newName`: The new name for the event (in this case, `john`).\n            \n2. { \"id\": 2, \"name\": \"john\", \"description\": \"Delectus in et veniam ut sint molestias minus magnam.\", \"startDate\": \"2024-08-21T15:04:10.2364937\", \"endDate\": \"2024-08-21T16:03:10.2364937\", \"location\": \"john\", \"course\": null}\n    \n    - **id**: The unique event ID (`2`)\n        \n    - **name**: The updated name of the event (e.g., `john`)\n        \n    - **description**: The description of the event\n        \n    - **startDate**: The start date of the event\n        \n    - **endDate**: The end date of the event\n        \n    - **location**: The location of the event\n        \n    - **course**: The associated course for the event\n        \n    \n    Example JSON response:\n    \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status with the updated event details.\n        \n    - If the event ID does not exist or the update fails, the API should return an appropriate error status, such as `404 Not Found` or `400 Bad Request`.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid event ID (`2`) and new name (`john`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status and the updated event details.\n    \n\n#### Negative Test\n\n- **Input**: Invalid event ID (`1000`) and new name (`john`)\n    \n- **Expected Outcome**: The API returns a `404 Not Found` status.\n    \n\n---\n\n  \n  \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Students from Page 1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/student/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"student",
+								"page",
+								"1"
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to fetch students from page 1 and that the API returns the correct student data.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `GET`\n        \n    - **Request URL**: `https://localhost:50466/student/page/1`\n        \n2. { \"totalItems\": 200, \"items\": \\[ { \"id\": 51, \"name\": \"Benny Moen\", \"email\": \"Sharon108@yahoo.com\", \"address\": \"897 Remington Prairie, Torphyville, French Polynesia\", \"phoneNumber\": \"1-568-750-9242 x859\", \"enrollmentDate\": \"2023-09-03T17:15:16.4134937\" } \\]}\n    \n    - **totalItems**: The total number of students available (e.g., `200`)\n        \n    - **items**: A list of students, where each student includes details such as:\n        \n        - `id`: The unique ID of the student\n            \n        - `name`: The student's name (e.g., `Benny Moen`)\n            \n        - `email`: The student's email address\n            \n        - `address`: The student's address\n            \n        - `phoneNumber`: The student's phone number\n            \n        - `enrollmentDate`: The student's enrollment date\n            \n    \n    Example JSON response:\n    \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status with the list of students.\n        \n    - If there are no students on page 1, the `items` array should be empty, and the response should still return `200 OK`.\n        \n    - If an invalid page number is provided, the API should return a `404 Not Found` status.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid page number (`1`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status and the list of students.\n    \n\n#### Negative Test\n\n- **Input**: Invalid page number (`1000`)\n    \n- **Expected Outcome**: The API returns a `404 Not Found` status indicating no students are available for that page.\n    \n\n---\n\n  \n  \n\n---\n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Student Details by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/student/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"student",
+								"1"
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to fetch the details of a student by ID and that the API returns the correct student data.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `GET`\n        \n    - **Request URL**: `https://localhost:50466/student/1`\n        \n2. { \"id\": 1, \"name\": \"Tom\", \"email\": \"Owen_Flatley@hotmail.com\", \"address\": \"11976 Ryder Keys, West Coopermouth, Slovenia\", \"phoneNumber\": \"(707) 931-8889\", \"enrollmentDate\": \"2024-08-31T17:32:25.3161066\", \"enrolledCourses\": \\[ { \"id\": 2, \"name\": \"Advanced Data Science\" } \\]}\n    \n    - **id**: The unique ID of the student (e.g., `1`)\n        \n    - **name**: The student's name (e.g., `Tom`)\n        \n    - **email**: The student's email address (e.g., `Owen_Flatley@hotmail.com`)\n        \n    - **address**: The student's address (e.g., `11976 Ryder Keys, West Coopermouth, Slovenia`)\n        \n    - **phoneNumber**: The student's phone number (e.g., `(707) 931-8889`)\n        \n    - **enrollmentDate**: The date the student enrolled (e.g., `\"2024-08-31T17:32:25.3161066\"`)\n        \n    - **enrolledCourses**: A list of courses the student is enrolled in. Each course includes:\n        \n        - **id**: The course ID\n            \n        - **name**: The course name\n            \n    \n    Example JSON response:\n    \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status with the student details.\n        \n    - If the student ID does not exist, the API should return a `404 Not Found` status indicating the student was not found.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid student ID (`1`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status with the student's details.\n    \n\n#### Negative Test\n\n- **Input**: Invalid student ID (`999`)\n    \n- **Expected Outcome**: The API returns a `404 Not Found` status indicating the student does not exist.\n    \n\n---\n\n  \n  \n\n---\n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50466/student/1/name?newName=Tom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50466",
+							"path": [
+								"student",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Tom"
+								}
+							]
+						},
+						"description": "**Test Objective**:  \n  \nEnsure that the front-end correctly interacts with the API to update the student's name and that the API reflects the change.\n\n1. **Request Details**:\n    \n    - **HTTP Method**: `PUT`\n        \n    - **Request URL**: `https://localhost:50466/student/1/name?newName=Tom`\n        \n2. { \"id\": 1, \"name\": \"Tom\", \"email\": \"Owen_Flatley@hotmail.com\", \"address\": \"11976 Ryder Keys, West Coopermouth, Slovenia\", \"phoneNumber\": \"(707) 931-8889\", \"enrollmentDate\": \"2024-08-31T17:32:25.3161066\", \"enrolledCourses\": \\[\\]}\n    \n    - **id**: The unique ID of the student (e.g., `1`)\n        \n    - **name**: The updated name of the student (e.g., `Tom`)\n        \n    - **email**: The student's email address (e.g., `Owen_Flatley@hotmail.com`)\n        \n    - **address**: The student's address (e.g., `11976 Ryder Keys, West Coopermouth, Slovenia`)\n        \n    - **phoneNumber**: The student's phone number (e.g., `(707) 931-8889`)\n        \n    - **enrollmentDate**: The date the student enrolled (e.g., `\"2024-08-31T17:32:25.3161066\"`)\n        \n    - **enrolledCourses**: A list of courses the student is enrolled in (can be empty if no courses are assigned).\n        \n    \n    Example JSON response:\n    \n3. **Test Result**:\n    \n    - If the request is successful, the API should return a `200 OK` status with the updated student details.\n        \n    - If an invalid student ID or new name is provided, the API should return an error response.\n        \n\n---\n\n### **Additional Test Scenarios (Optional)**:\n\n#### Positive Test\n\n- **Input**: Valid student ID (`1`) and valid new name (`Tom`)\n    \n- **Expected Outcome**: The API returns a `200 OK` status with the updated student's details.\n    \n\n#### Negative Test\n\n- **Input**: Invalid student ID (`999`) or missing `newName` parameter\n    \n- **Expected Outcome**: The API returns a `400 Bad Request` or `404 Not Found` status depending on the error.\n    \n\n---\n\n  \n  \n\n---\n\n---"
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains test cases designed to verify the integration of different components within the BCU Contoso Timetable API. These tests ensure that multiple system components work together as expected when making requests. The integration tests will cover scenarios such as the interaction between the database and API endpoints, as well as the expected behavior when multiple systems communicate with each other, ensuring data consistency and proper functionality across the application."
+		},
+		{
+			"name": "SQL injection testing",
+			"item": [
+				{
+					"name": "Get Course Details by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53155/course/2!",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53155",
+							"path": [
+								"course",
+								"2!"
+							]
+						},
+						"description": "#### **Test SQL Injection in URL Parameters**\n\n- **Test Endpoint:** `GET /course/{courseId}`\n    \n- **SQL Injection Example:**\n    \n    - `courseId=2' OR '1'='1`\n        \n    - `courseId=1' UNION SELECT null, username, password FROM users--`\n        \n- **Expected Result:**\n    \n    - **Response Code:** `400 Bad Request`\n        \n    - **Message:** `\"The value '2' is not valid.\"`\n        \n    - Ensure that the system rejects the request with an appropriate validation error.\n        \n\n#### **2\\. Test SQL Injection in Query Parameters**\n\n- **Test Endpoint:** `PUT /course/{courseId}/name`\n    \n- **SQL Injection Example:**\n    \n    - `newName=Jackson'; DROP TABLE students;--`\n        \n    - `newName=' OR 1=1--`\n        \n- **Expected Result:**\n    \n    - **Response Code:** `400 Bad Request`\n        \n    - **Message:** `\"Invalid input\"` or `\"The value 'newName' is not valid.\"`\n        \n    - Ensure that the system does not process malicious queries.\n        \n\n#### **3\\. Test SQL Injection in POST Body**\n\n- **Test Endpoint:** `POST /course`\n    \n- { \"courseId\": \"1' OR 1=1;--\", \"newName\": \"Jackson\"}\n    \n- **Expected Result:**\n    \n    - **Response Code:** `400 Bad Request`\n        \n    - **Message:** `\"Invalid input\"` or `\"Invalid data\"`\n        \n    - Ensure that the backend does not process SQL injection payloads.\n        \n\n#### **4\\. Error Handling Validation**\n\n- **Expected Result:**\n    \n    - The API should not expose sensitive error details like stack traces or database errors.\n        \n    - { \"status\": 400, \"errors\": { \"courseId\": \\[\"The value '1' OR '1' = '1' is not valid.\"\\] }}"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Courses from Page",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53155/course/page/1-",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53155",
+							"path": [
+								"course",
+								"page",
+								"1-"
+							]
+						},
+						"description": "**Test Endpoint:** `GET /course/page/{pageNumber}`\n\n- **SQL Injection Example:**\n    \n    - `pageNumber=1' OR '1'='1`\n        \n    - `pageNumber=1' UNION SELECT null, username, password FROM users--`\n        \n    - `pageNumber=1' DROP TABLE courses;--`\n        \n- **Expected Result:**\n    \n    - **Response Code:** `400 Bad Request`\n        \n    - **Message:** `\"The value '1' is not valid.\"`\n        \n    - The system should reject SQL injection payloads in URL parameters and return an appropriate validation error.\n        \n\n#### **How to Document in Postman**\n\n1. **Create a Request:**\n    \n    - Method: `GET`\n        \n    - URL: `https://localhost:53155/course/page/{pageNumber}`\n        \n2. **Add SQL Injection Test Cases** under **Tests** tab.\n    \n3. **Save the Collection** and export if needed.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53155/course/2)/name?newName=deborah",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53155",
+							"path": [
+								"course",
+								"2)",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "deborah"
+								}
+							]
+						},
+						"description": "**Objective**:\n\nTest invalid `courseId` inputs and SQL injection attempts in the `PUT /course/{courseId}/name` endpoint.\n\n### **Test Cases**:\n\n1. **Invalid** **`courseId`** **(Non-integer)**:\n    \n    - **Request**: `PUT /course/2)/name?newName=deborah`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '2)' is not valid.\"`\n        \n2. **SQL Injection**:\n    \n    - **Request**: `PUT /course/1' OR '1'='1--/name?newName=deborah`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"Invalid input\"`\n        \n\n### **Expected Behavior**:\n\n- The API should return a `400 Bad Request` error for invalid inputs.\n    \n- It should reject SQL injections without performing any SQL operations.\n    \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events from Page",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/event/page/2*",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"event",
+								"page",
+								"2*"
+							]
+						},
+						"description": "## **Objective**:\n\nTest invalid page numbers and potential SQL injection attempts in the `GET /event/page/{pageNumber}` endpoint.\n\n### **Test Cases**:\n\n1. **SQL Injection Attempt in** **`pageNumber`**:\n    \n    - **Request**: `GET /event/page/2\\*`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '2\\*' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should return a `400 Bad Request` error for invalid `pageNumber` inputs.\n    \n- It should reject SQL injection attempts and malformed `pageNumber` values.\n    \n\n---\n\n  \n  \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/event/2$",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"event",
+								"2$"
+							]
+						},
+						"description": "### **Objective**:\n\nTest the behavior of the `GET /event/{eventId}` endpoint when an invalid `eventId` is passed, including attempts at SQL injection.\n\n### **Test Case**:\n\n1. **SQL Injection Attempt in** **`eventId`**:\n    \n    - **Request**: `GET /event/2$`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '2$' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should reject the invalid input and return a `400 Bad Request` error.\n    \n- It should prevent any SQL injection or malformed input in the `eventId` field.\n    \n\n---\n\n  \n  \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/event/%/name?newName=john",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"event",
+								"%",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "john"
+								}
+							]
+						},
+						"description": "### **Objective**:\n\nTest the behavior of the `PUT /event/{eventId}/name` endpoint when an invalid `eventId` containing special characters (e.g., `%`) is passed.\n\n### **Test Case**:\n\n1. **SQL Injection Attempt in** **`eventId`**:\n    \n    - **Request**: `PUT /event/%/name?newName=john`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '%' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should reject the invalid input and return a `400 Bad Request` error.\n    \n- It should prevent any SQL injection or malformed input in the `eventId` field."
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Students from Page",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/student/page/1&",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"student",
+								"page",
+								"1&"
+							]
+						},
+						"description": "### **Objective**:\n\nTest the behavior of the `GET /student/page/{pageNumber}` endpoint when an invalid `pageNumber` containing special characters (e.g., `&`) is passed.\n\n### **Test Case**:\n\n1. **SQL Injection Attempt in** **`pageNumber`**:\n    \n    - **Request**: `GET /student/page/1&`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '1&' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should reject the invalid input and return a `400 Bad Request` error.\n    \n- It should prevent any SQL injection or malformed input in the `pageNumber` field.\n    \n\n---\n\n---\n\n---\n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Student Details by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/student/1^",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"student",
+								"1^"
+							]
+						},
+						"description": "### **Objective**:\n\nTest the behavior of the `GET /student/{studentId}` endpoint when an invalid `studentId` containing a special character (`^`) is passed.\n\n### **Test Case**:\n\n1. **SQL Injection Attempt in** **`studentId`**:\n    \n    - **Request**: `GET /student/1^`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '1^' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should reject the invalid input and return a `400 Bad Request` error.\n    \n- It should prevent any SQL injection or malformed input in the `studentId` field."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:50942/student/1&/name?newName=Tom*",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "50942",
+							"path": [
+								"student",
+								"1&",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Tom*"
+								}
+							]
+						},
+						"description": "## **Objective**:\n\nTest the behavior of the `PUT /student/{studentId}/name` endpoint when an invalid `studentId` containing the special character (`\\*`) is passed.\n\n### **Test Case**:\n\n1. **SQL Injection Attempt in** **`studentId`**:\n    \n    - **Request**: `PUT /student/1\\*/name?newName=Tom`\n        \n    - **Expected Response**: `400 Bad Request` with message `\"The value '1\\*' is not valid.\"`\n        \n\n### **Expected Behavior**:\n\n- The API should reject the invalid input and return a `400 Bad Request` error.\n    \n- It should prevent any SQL injection or malformed input in the `studentId` field."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains test cases designed to identify vulnerabilities related to SQL injection within the BCU Contoso Timetable API. The tests simulate malicious input to ensure the API is properly handling user input and preventing unauthorized database queries. The goal of these tests is to verify that the API is secure and that it cannot be exploited by attackers attempting to manipulate SQL queries via user inputs, thereby protecting the integrity and security of the database."
+		},
+		{
+			"name": "Cross site scripting (XSS)",
+			"item": [
+				{
+					"name": "Update Course Name by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53666/course/2/name?newName=<script>alert('XSS')",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53666",
+							"path": [
+								"course",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "<script>alert('XSS')"
+								}
+							]
+						},
+						"description": "**Cross-Site Scripting (XSS) Testing Documentation**\n\n**Purpose:**  \nCross-Site Scripting (XSS) vulnerabilities occur when an attacker is able to inject malicious JavaScript or HTML code into the web application, which then gets executed in the browser of an unsuspecting user. This can lead to various attacks such as stealing user data, session hijacking, or redirecting users to malicious sites.\n\n**Test Objective:**  \nThe goal of XSS testing is to ensure that the web application properly handles input fields that might contain executable JavaScript or HTML. If the application is vulnerable to XSS, malicious scripts could execute in the browser when interacting with the application.\n\n**Test Steps:**\n\n1. **Identify Input Fields:** Focus on parameters that accept user inputs, such as `newName` in the query parameters.\n    \n2. **Inject Malicious Script:** Test these input fields by injecting a script tag, such as `alert(&#x27;XSS&#x27;)`, into the input.\n    \n3. **Verify Output:** The system should sanitize the input and return the input as plain text rather than executing the injected script. If the input is displayed as-is (as in this case, it is rendered as `alert(&#x27;XSS&#x27;)`), the application is correctly handling the input.\n    \n\n**Expected Behavior:**  \nThe backend system should:\n\n- Sanitize inputs to prevent the execution of malicious scripts.\n    \n- Return the input as plain text (e.g., display the script tag as it is without executing it).\n    \n\n**Test Example:**  \nIn the screenshot, the input field `newName` was tested with the script `alert(&#x27;XSS&#x27;)`. The backend responded by displaying the input as a string: `alert(&#x27;XSS&#x27;)`, which shows that the backend successfully sanitized the input, preventing script execution.\n\n**Conclusion:**  \nThe system is not vulnerable to XSS as it successfully sanitized the input and returned it safely without executing the script. This confirms that XSS protection mechanisms are in place, ensuring the security of the application.\n\n  \n  \n\n---"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53666/student/1/name?newName=<script>alert('XSS')",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53666",
+							"path": [
+								"student",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "<script>alert('XSS')"
+								}
+							]
+						},
+						"description": "### Cross-Site Scripting (XSS) Documentation\n\n**Overview**:  \n  \nCross-Site Scripting (XSS) is a security vulnerability where an attacker injects malicious scripts into web pages viewed by other users. This occurs when user input is not properly sanitized and is reflected back to the user in the response, allowing the attacker’s script to execute in the user’s browser.\n\n**Test Scenario**:\n\n- The `newName` input parameter was tested by injecting a malicious script: `alert(&#x27;XSS&#x27;)`.\n    \n- The expected outcome is for the input to be sanitized or escaped before being rendered, preventing the execution of the script.\n    \n\n**Observed Result**:\n\n- The injected script was reflected in the API response as part of the `newName` field.\n    \n- The API did not sanitize or escape the input, allowing the script to be executed if displayed in the browser.\n    \n\n**Impact**:\n\n- **Malicious Scripts Execution**: If this API is integrated into a web page, it could allow an attacker to execute scripts in the user's browser, potentially stealing sensitive data, such as session cookies, or performing other malicious actions.\n    \n\n**Prevention**:\n\n- **Sanitize Inputs**: Convert special characters (e.g., `<`, `>`, `&`, `\"` to their HTML entity equivalents).\n    \n- **Escape Output**: Ensure user input is escaped before inserting into HTML or JavaScript.\n    \n- **Implement Content Security Policy (CSP)**: Restrict the loading of untrusted scripts.\n    \n\nBy handling inputs securely, we can protect users from XSS attacks."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:53666/event/8/name?newName=<script>alert('XSS')</script>",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "53666",
+							"path": [
+								"event",
+								"8",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "<script>alert('XSS')</script>"
+								}
+							]
+						},
+						"description": "### Cross-Site Scripting (XSS) Documentation\n\n**Overview**:  \n  \nCross-Site Scripting (XSS) is a security vulnerability where an attacker injects malicious scripts into web pages viewed by other users. This occurs when user input is not properly sanitized and is reflected back to the user in the response, allowing the attacker’s script to execute in the user’s browser.\n\n**Test Scenario**:\n\n- The `newName` input parameter was tested by injecting a malicious script: `alert(&#x27;XSS&#x27;)`.\n    \n- The expected outcome is for the input to be sanitized or escaped before being rendered, preventing the execution of the script.\n    \n\n**Observed Result**:\n\n- The injected script was reflected in the API response as part of the `newName` field.\n    \n- The API did not sanitize or escape the input, allowing the script to be executed if displayed in the browser.\n    \n\n**Impact**:\n\n- **Malicious Scripts Execution**: If this API is integrated into a web page, it could allow an attacker to execute scripts in the user's browser, potentially stealing sensitive data, such as session cookies, or performing other malicious actions.\n    \n\n**Prevention**:\n\n- **Sanitize Inputs**: Convert special characters (e.g., `<`, `>`, `&`, `\"` to their HTML entity equivalents).\n    \n- **Escape Output**: Ensure user input is escaped before inserting into HTML or JavaScript.\n    \n- **Implement Content Security Policy (CSP)**: Restrict the loading of untrusted scripts.\n    \n\nBy handling inputs securely, we can protect users from XSS attacks."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains test cases focused on identifying potential Cross-Site Scripting (XSS) vulnerabilities within the BCU Contoso Timetable API. The tests aim to ensure that the API properly handles user input by sanitizing it to prevent the execution of malicious scripts in the browser. The goal is to verify that the API is not vulnerable to XSS attacks, which could compromise user security and lead to unintended script execution in users' browsers."
+		},
+		{
+			"name": "Maximum String Length Issue",
+			"item": [
+				{
+					"name": "Boundary Testing - Maximum String Length Issue",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "URL: https://localhost:53666/course/1/name?newName=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"protocol": "URL: https",
+							"host": [
+								"localhost"
+							],
+							"port": "53666",
+							"path": [
+								"course",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+									"description": "Test: Boundary Testing - Maximum String Length Issue\n\nTest Description: This test checks if the API handles long strings correctly. The API should accept strings up to 100 characters and reject strings over 100 characters.\n\nRequest Details:\n\nURL: https://localhost:53666/course/1/name?newName=<test-string>\n\nExpected Behavior: The API should accept the string if it’s exactly 100 characters long and should reject strings longer than that.\n\nObserved Behavior: When sending a string of 100+ characters, the request takes longer than expected, potentially resulting in a timeout.\n\nSteps:\n\nSend PUT request with a string of 100 characters in the newName field.\n\nExpected Result: Response should be received within a reasonable time (under 3 seconds).\n\nObserved Result: The request takes longer than expected, potentially resulting in a timeout.\n\nSend PUT request with a string of 101 characters.\n\nExpected Result: The API should reject the request with a validation error.\n\nObserved Result: The request is not processed, and no error message is returned.\n\nRecommendation:\n\nEnsure that the API enforces input validation for string lengths and handles large inputs gracefully."
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains test cases designed to assess how the BCU Contoso Timetable API handles boundary input values, specifically testing for maximum string length. The tests check if the API can handle strings of varying lengths appropriately, ensuring that inputs that exceed the expected length are either rejected or handled without causing performance issues or crashes. The goal is to ensure that the API properly validates input lengths and maintains optimal performance even with large input sizes."
+		},
+		{
+			"name": "Functional test",
+			"item": [
+				{
+					"name": "Fetch Courses from Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"totalItems\");\r",
+									"    pm.expect(jsonResponse.items).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/course/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"course",
+								"page",
+								"1"
+							]
+						},
+						"description": "This endpoint makes an HTTP GET request to retrieve the first page of course data.\n\n### Response\n\nThe response will be in JSON format with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"totalItems\": {\n            \"type\": \"integer\"\n        },\n        \"items\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"id\": {\n                        \"type\": \"integer\"\n                    },\n                    \"name\": {\n                        \"type\": \"string\"\n                    },\n                    \"description\": {\n                        \"type\": \"string\"\n                    },\n                    \"code\": {\n                        \"type\": \"string\"\n                    },\n                    \"startDate\": {\n                        \"type\": \"string\",\n                        \"format\": \"date-time\"\n                    },\n                    \"endDate\": {\n                        \"type\": \"string\",\n                        \"format\": \"date-time\"\n                    }\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Details by ID 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"description\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"code\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"startDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"endDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrolledStudents\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/course/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"course",
+								"1"
+							]
+						},
+						"description": "### GET /course/1\n\nThis endpoint retrieves the details of a specific course.\n\n#### Request\n\nThis is a simple GET request to retrieve the details of the course with ID 1.\n\n#### Response\n\nThe response will be in JSON format and will include the following fields:\n\n- `id` (number): The unique identifier of the course.\n    \n- `name` (string): The name of the course.\n    \n- `description` (string): A brief description of the course.\n    \n- `code` (string): The code associated with the course.\n    \n- `startDate` (string): The start date of the course.\n    \n- `endDate` (string): The end date of the course.\n    \n- `enrolledStudents` (array): An array of enrolled student objects, each containing:\n    \n    - `id` (number): The unique identifier of the student.\n        \n    - `name` (string): The name of the student.\n        \n    - `email` (string): The email address of the student.\n        \n    - `address` (string): The address of the student.\n        \n    - `phoneNumber` (string): The phone number of the student.\n        \n    - `enrollmentDate` (string): The date when the student enrolled in the course.\n        \n- `events` (array): An array of event objects, each containing:\n    \n    - `id` (number): The unique identifier of the event.\n        \n    - `name` (string): The name of the event.\n        \n    - `description` (string): A brief description of the event.\n        \n    - `startDate` (string): The start date of the event.\n        \n    - `endDate` (string): The end date of the event.\n        \n    - `location` (string): The location of the event.\n        \n\n``` json\n{\n  \"id\": 0,\n  \"name\": \"\",\n  \"description\": \"\",\n  \"code\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\",\n  \"enrolledStudents\": [\n    {\n      \"id\": 0,\n      \"name\": \"\",\n      \"email\": \"\",\n      \"address\": \"\",\n      \"phoneNumber\": \"\",\n      \"enrollmentDate\": \"\"\n    }\n  ],\n  \"events\": [\n    {\n      \"id\": 0,\n      \"name\": \"\",\n      \"description\": \"\",\n      \"startDate\": \"\",\n      \"endDate\": \"\",\n      \"location\": \"\"\n    }\n  ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Name by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"description\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"code\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"startDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"endDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrolledStudents\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/course/21/name?newName=Spencer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"course",
+								"21",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Spencer"
+								}
+							]
+						},
+						"description": "### Update Course Name\n\nThis endpoint allows the client to update the name of a specific course.\n\n#### Request\n\n- Method: PUT\n    \n- URL: `https://localhost:51039/course/21/name?newName=Spencer`\n    \n\n#### Response\n\nThe response is in JSON format and has the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"id\": {\n            \"type\": \"integer\"\n        },\n        \"name\": {\n            \"type\": \"string\"\n        },\n        \"description\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"type\": \"string\"\n        },\n        \"startDate\": {\n            \"type\": \"string\"\n        },\n        \"endDate\": {\n            \"type\": \"string\"\n        },\n        \"enrolledStudents\": {\n            \"type\": \"array\"\n        },\n        \"events\": {\n            \"type\": \"array\"\n        }\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events from Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"totalItems\");\r",
+									"    pm.expect(jsonResponse.items).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/event/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"event",
+								"page",
+								"1"
+							]
+						},
+						"description": "### GET /event/page/1\n\nThis endpoint retrieves a paginated list of events.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n- Path Parameters\n    \n    - page (number, required): The page number to retrieve.\n        \n\n#### Response\n\nThe response will be in JSON format with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"totalItems\": {\n            \"type\": \"number\"\n        },\n        \"items\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"id\": {\n                        \"type\": \"number\"\n                    },\n                    \"name\": {\n                        \"type\": \"string\"\n                    },\n                    \"description\": {\n                        \"type\": \"string\"\n                    },\n                    \"code\": {\n                        \"type\": [\"string\", \"null\"]\n                    },\n                    \"startDate\": {\n                        \"type\": \"string\"\n                    },\n                    \"endDate\": {\n                        \"type\": \"string\"\n                    }\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Events by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"description\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"startDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"endDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"location\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"course\");\r",
+									"    \r",
+									"    pm.expect(jsonResponse.course).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse.course).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse.course).to.have.property(\"description\");\r",
+									"    pm.expect(jsonResponse.course).to.have.property(\"startDate\");\r",
+									"    pm.expect(jsonResponse.course).to.have.property(\"endDate\");\r",
+									"});\r",
+									"\r",
+									"// Validate that startDate and endDate are in valid ISO 8601 format\r",
+									"pm.test(\"startDate and endDate are in valid ISO 8601 format\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    \r",
+									"    // Regular expression for ISO 8601 date format\r",
+									"    const iso8601Regex = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?([+-]\\d{2}:\\d{2}|Z)$/;\r",
+									"    \r",
+									"    // Test the startDate and endDate fields for both the event and the course\r",
+									"    pm.expect(jsonResponse.startDate).to.match(iso8601Regex, 'event startDate is in ISO 8601 format');\r",
+									"    pm.expect(jsonResponse.endDate).to.match(iso8601Regex, 'event endDate is in ISO 8601 format');\r",
+									"    pm.expect(jsonResponse.course.startDate).to.match(iso8601Regex, 'course startDate is in ISO 8601 format');\r",
+									"    pm.expect(jsonResponse.course.endDate).to.match(iso8601Regex, 'course endDate is in ISO 8601 format');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/event/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"event",
+								"1"
+							]
+						},
+						"description": "# Retrieve Event Details\n\nThis endpoint retrieves the details of a specific event by providing the event ID in the URL.\n\n## Request\n\n### Endpoint\n\n`GET https://localhost:51039/event/1`\n\n## Response\n\n- Status: 200\n    \n- Content-Type: application/json\n    \n\n``` json\n{\n    \"id\": 0,\n    \"name\": \"\",\n    \"description\": \"\",\n    \"startDate\": \"\",\n    \"endDate\": \"\",\n    \"location\": \"\",\n    \"course\": {\n        \"id\": 0,\n        \"name\": \"\",\n        \"description\": \"\",\n        \"code\": \"\",\n        \"startDate\": \"\",\n        \"endDate\": \"\"\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"description\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"startDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"endDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"location\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"course\");\r",
+									"});\r",
+									"\r",
+									"// Validate that startDate and endDate are in valid ISO 8601 format\r",
+									"pm.test(\"startDate and endDate are in valid ISO 8601 format\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    \r",
+									"    // Regular expression for ISO 8601 date format\r",
+									"    const iso8601Regex = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?([+-]\\d{2}:\\d{2}|Z)$/;\r",
+									"    \r",
+									"    // Test the startDate and endDate fields\r",
+									"    pm.expect(jsonResponse.startDate).to.match(iso8601Regex, 'startDate is in ISO 8601 format');\r",
+									"    pm.expect(jsonResponse.endDate).to.match(iso8601Regex, 'endDate is in ISO 8601 format');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/event/2/name?newName=john",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"event",
+								"2",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "john"
+								}
+							]
+						},
+						"description": "This endpoint allows the user to update the name of an event with a specific ID. The request should be sent as an HTTP PUT to the specified URL with the new name provided as a query parameter.\n\n### Request Body\n\nNo request body is required for this request.\n\n### Response Body\n\nThe response will be in JSON format with the updated details of the event. The response includes the event ID, updated name, description, start date, end date, location, and course information."
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Students from Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"totalItems\");\r",
+									"    pm.expect(jsonResponse.items).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/student/page/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"student",
+								"page",
+								"1"
+							]
+						},
+						"description": "### GET /student/page/1\n\nThis endpoint retrieves a page of student data.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n#### Response\n\nThe response is in JSON format and follows the schema below:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"totalItems\": {\n            \"type\": \"number\"\n        },\n        \"items\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"id\": {\n                        \"type\": \"number\"\n                    },\n                    \"name\": {\n                        \"type\": \"string\"\n                    },\n                    \"email\": {\n                        \"type\": \"string\"\n                    },\n                    \"address\": {\n                        \"type\": \"string\"\n                    },\n                    \"phoneNumber\": {\n                        \"type\": \"string\"\n                    },\n                    \"enrollmentDate\": {\n                        \"type\": \"string\",\n                        \"format\": \"date-time\"\n                    }\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Student Details by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"email\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"address\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"phoneNumber\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrollmentDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrolledCourses\");\r",
+									"    \r",
+									"    // Check that enrolledCourses is an array\r",
+									"    pm.expect(jsonResponse.enrolledCourses).to.be.an(\"array\");\r",
+									"    \r",
+									"    // Check if each course contains the expected keys\r",
+									"    jsonResponse.enrolledCourses.forEach(course => {\r",
+									"        pm.expect(course).to.have.property(\"id\");\r",
+									"        pm.expect(course).to.have.property(\"name\");\r",
+									"        pm.expect(course).to.have.property(\"description\");\r",
+									"        pm.expect(course).to.have.property(\"code\");\r",
+									"        pm.expect(course).to.have.property(\"startDate\");\r",
+									"        pm.expect(course).to.have.property(\"endDate\");\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"// Validate that enrollmentDate, course startDate, and course endDate are in valid ISO 8601 format\r",
+									"pm.test(\"Dates are in valid ISO 8601 format\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    \r",
+									"    // Regular expression for ISO 8601 date format\r",
+									"    const iso8601Regex = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?([+-]\\d{2}:\\d{2}|Z)$/;\r",
+									"    \r",
+									"    // Validate enrollmentDate\r",
+									"    pm.expect(jsonResponse.enrollmentDate).to.match(iso8601Regex, 'enrollmentDate is in ISO 8601 format');\r",
+									"    \r",
+									"    // Validate dates for each enrolled course\r",
+									"    jsonResponse.enrolledCourses.forEach(course => {\r",
+									"        pm.expect(course.startDate).to.match(iso8601Regex, `course ${course.id} startDate is in ISO 8601 format`);\r",
+									"        pm.expect(course.endDate).to.match(iso8601Regex, `course ${course.id} endDate is in ISO 8601 format`);\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/student/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"student",
+								"1"
+							]
+						},
+						"description": "The endpoint retrieves information about a specific student identified by their ID. The response returns a JSON object with the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"id\": {\n      \"type\": \"integer\"\n    },\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"email\": {\n      \"type\": \"string\"\n    },\n    \"address\": {\n      \"type\": \"string\"\n    },\n    \"phoneNumber\": {\n      \"type\": \"string\"\n    },\n    \"enrollmentDate\": {\n      \"type\": \"string\"\n    },\n    \"enrolledCourses\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\"\n          },\n          \"name\": {\n            \"type\": \"string\"\n          },\n          \"description\": {\n            \"type\": \"string\"\n          },\n          \"code\": {\n            \"type\": \"string\"\n          },\n          \"startDate\": {\n            \"type\": \"string\"\n          },\n          \"endDate\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the response status is 200 (OK)\r",
+									"pm.test(\"Response status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Check if the response contains the expected keys\r",
+									"pm.test(\"Response contains expected keys\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse).to.have.property(\"id\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"name\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"email\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"address\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"phoneNumber\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrollmentDate\");\r",
+									"    pm.expect(jsonResponse).to.have.property(\"enrolledCourses\");\r",
+									"    \r",
+									"    // Check that enrolledCourses is an array\r",
+									"    pm.expect(jsonResponse.enrolledCourses).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"// Validate that enrollmentDate is in valid ISO 8601 format\r",
+									"pm.test(\"enrollmentDate is in valid ISO 8601 format\", function () {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    \r",
+									"    // Regular expression for ISO 8601 date format\r",
+									"    const iso8601Regex = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?([+-]\\d{2}:\\d{2}|Z)$/;\r",
+									"    \r",
+									"    // Validate enrollmentDate\r",
+									"    pm.expect(jsonResponse.enrollmentDate).to.match(iso8601Regex, 'enrollmentDate is in ISO 8601 format');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:51039/student/1/name?newName=Tom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "51039",
+							"path": [
+								"student",
+								"1",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Tom"
+								}
+							]
+						},
+						"description": "### Update Student Name\n\nThis endpoint is used to update the name of a student with the specified ID.\n\n#### Request Parameters\n\n- Path Parameters\n    \n    - `1` (integer): ID of the student to be updated\n        \n- Query Parameters\n    \n    - `newName` (string): The new name to be assigned to the student\n        \n\n#### Response\n\nUpon a successful update, the server responds with a status code of 200 and a JSON object containing the updated student details, including the ID, name, email, address, phone number, enrollment date, and enrolled courses.\n\nExample Response:\n\n``` json\n{\n    \"id\": 0,\n    \"name\": \"\",\n    \"email\": \"\",\n    \"address\": \"\",\n    \"phoneNumber\": \"\",\n    \"enrollmentDate\": \"\",\n    \"enrolledCourses\": []\n}\n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "### Functional Test\n\nThis folder contains the functional tests for the BCU Contoso Timetable API. The tests validate the core functionality of the API endpoints, ensuring that each request type (GET, PUT) works as expected for various operations, such as fetching course details, updating event names, and student information. The following tests have been implemented:\n\n**GET** Fetch Courses from Page\n\n**GET** Get Course Details by ID 1\n\n**PUT** Update Course Name by ID\n\n**GET** Fetch Events from Page\n\n**GET** Fetch Events by ID\n\n**PUT** Update Event Name\n\n**GET** Fetch Students from Page\n\n**GET** Fetch Student Details by ID\n\n**PUT** Update Student Name"
+		}
+	]
+}
